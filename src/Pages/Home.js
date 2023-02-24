@@ -6,7 +6,9 @@ function Home() {
     <>
     <div className="container">
       <div className="row">
-        <div className="col-sm-4">hi</div>
+        <div className="col-sm-4">
+          <LoginForm></LoginForm>
+        </div>
       </div>
     </div>
     
