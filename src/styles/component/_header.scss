@@ -1,0 +1,26 @@
+.global-header{
+   
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-bottom: 12px;
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
+    .header-logo{
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+    .header-nav{
+        flex-grow: 1;
+        :first-child{
+            margin-right: 4px;
+        }
+    }
+    .header-info{
+        
+        margin-right: 12px;
+    }
+
+}
