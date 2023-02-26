@@ -4,7 +4,7 @@
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box; }
 
-h1 {
+h1, h2 {
   margin: 0; }
 
 a {
@@ -341,7 +341,77 @@ template {
 [hidden] {
   display: none; }
 
-.login-section {
-  width: 800px; }
+.login-section-wrapper {
+  display: flex;
+  justify-content: center; }
+  .login-section-wrapper .login-section {
+    border: 1px solid black; }
+    .login-section-wrapper .login-section .login-form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .login-section-wrapper .login-section .login-form .login-form-login-button {
+        border: 1px solid black; }
+      .login-section-wrapper .login-section .login-form .login-form-regist-button {
+        border: 1px solid black; }
+
+.global-header {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+  margin-bottom: 12px; }
+  .global-header a {
+    text-decoration: none;
+    color: inherit; }
+  .global-header .header-logo {
+    margin-left: 8px;
+    margin-right: 8px; }
+  .global-header .header-nav {
+    flex-grow: 1; }
+    .global-header .header-nav :first-child {
+      margin-right: 4px; }
+  .global-header .header-info {
+    margin-right: 12px; }
+
+.board-detail-list {
+  display: flex;
+  padding-left: 0;
+  justify-content: space-between; }
+
+.board-form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px; }
+  .board-form-header .board-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 0; }
+  .board-form-header .board-write {
+    font-size: 16px;
+    padding: 4px;
+    background-color: #9f9494;
+    border-radius: 2px; }
+
+.paging {
+  display: flex;
+  justify-content: center; }
+
+.board-item-list {
+  height: 40px;
+  border-bottom: 1px solid #c9c1c1;
+  padding: 0;
+  margin-bottom: 2px; }
+  .board-item-list .board-item-main {
+    display: flex;
+    font-size: 16px; }
+    .board-item-list .board-item-main .board-item-theme {
+      font-weight: 700; }
+  .board-item-list .board-item-desc {
+    display: flex;
+    font-size: 4px; }
+    .board-item-list .board-item-desc :nth-child(2) {
+      margin: 0 4px 0 4px; }
 
 /*# sourceMappingURL=index.css.map */
