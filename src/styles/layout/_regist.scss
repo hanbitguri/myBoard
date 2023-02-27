@@ -1,0 +1,30 @@
+.regist-form{
+    margin-top: 16px;
+    span{
+        display: block;
+        margin-bottom: 4px;
+        font-weight: 700;
+    }
+    input{
+        padding: 4px;
+        border: 1px solid rgb(158, 154, 154);
+        width: 100%;
+        height: 38px;
+        margin-bottom: 4px;
+    }
+    select{
+        width: 100%;
+        height: 38px;
+        background-color: #b7afaf;
+        margin-bottom: 4px;
+    }
+    button{
+        margin-top: 32px;
+        width: 100%;
+        height: 38px;
+        background-color: #b7afaf;
+    }
+    .regist-id{
+        margin-bottom: 16px;
+    }
+}
