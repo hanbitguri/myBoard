@@ -1,17 +1,25 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import authContext from '../Store/auth-context'
 
 function Header() {
   return (
-    <header className='global-header'>
+    <authContext.Consumer>
+      {(authContext)=>{
+        return (
+        <header className='global-header'>
         <h2 className='header-logo'>★</h2>
         <nav className='header-nav'>
         <button><Link to={'/'}>홈</Link></button>
         <button><Link to={'/board'}>게시판</Link></button>
         </nav>
 
-        <button className='header-info'><Link to={'/login'}>로그인</Link></button>
+        {authContext.isLogin ? <div>회원님</div> : <button className='header-info'><Link to={'/login'}>로그인</Link></button>}
     </header>
+        )
+      }}
+    
+    </authContext.Consumer>
   )
 }
 
