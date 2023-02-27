@@ -1,0 +1,21 @@
+.read-form{
+    .read-form-header{
+        border-bottom: 1px solid rgb(186, 163, 163);
+        margin-bottom: 16px;
+        h2{
+            font-weight: 700;
+            font-size: 18px;
+            margin: 0;
+        }
+        span{
+            font-size: 12px;
+            &::after{
+                content: '|';
+                margin: 0 3px 0 3px;
+                opacity: 0.4;
+                font-size: 4px;
+            }
+            
+        }
+    }
+}
