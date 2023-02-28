@@ -1,20 +1,35 @@
 import React from 'react'
-
-function Board() {
+import { Link } from 'react-router-dom'
+import BoardItem from '../Components/BoardItem'
+import authContext from '../Store/auth-context'
+function Board({boardItem}) {
   return (
-    <section className='board-form'>
-      <h2 className='board-title'>상상 게시판</h2>
-      <div className='board-detail'>
+    <authContext.Consumer>
+    {(auth)=>{
+      return(
+        <section className='board-form'>
+      <div className='board-form-header'>
+      <h2 className='board-title'>게시판</h2>
+      <button className='board-write'><Link to={'/board/write'}>글쓰기</Link></button>
+      </div>
+      {/* <div className='board-detail'>
       <ul className='board-detail-list'>
         <li className='board-detail-item'>번호</li>
         <li className='board-detail-item'>제목</li>
         <li className='board-detail-item'>글쓴이</li>
         <li className='board-detail-item'>작성일</li>
         <li className='board-detail-item'>조회</li>
-        <li className='board-detail-item'>추천</li>
       </ul>
-      </div>
+      </div> */}
+      <BoardItem boardItem={boardItem}/>
+      <span className='paging'>
+        <button className='prev-page'>이전페이지</button>
+        <button className='next-page'>다음페이지</button>
+      </span>
     </section>
+      )
+    }}
+    </authContext.Consumer>
   )
 }
 
