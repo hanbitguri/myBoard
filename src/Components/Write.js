@@ -5,7 +5,7 @@ function Write() {
     const [detail,setDetail] = useState('')
     const [writer,setWriter] = useState('')
     const [theme,setTheme] = useState('')
-    const button = useRef();
+    const [password,setPassword] = useState('')
   return (
     <form onSubmit={(e)=>{
         e.preventDefault();
@@ -18,6 +18,7 @@ function Write() {
                 date:(new Date()).toLocaleDateString(),
                 viewPoint:0,
                 theme:theme,
+                password:password,
             }),
             header:{'Content-Type': 'application/json'}
         })
@@ -28,7 +29,7 @@ function Write() {
             setWriter(e.target.value)
         }} maxLength='5' />
         <ul className='write-theme-list' >
-            <li className='write-theme-item'><button ref={button} onClick={(e)=>{
+            <li className='write-theme-item'><button onClick={(e)=>{
                 e.preventDefault()
                 setTheme('자유')
             }}>자유</button></li>
@@ -49,6 +50,9 @@ function Write() {
         <textarea name="" id="detail" placeholder='내용을 입력하세요.' cols="30" rows="10" onChange={(e)=>{
             setDetail(e.target.value)
         }}></textarea>
+        <input type="password" id='password' placeholder='비밀번호' value={password} onChange={(e)=>{
+            setPassword(e.target.value)
+        }} maxLength='5' />
         <button type="submit" className='write-form-submit-button'>글쓰기</button>
     </form>
   )
