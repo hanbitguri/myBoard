@@ -57,6 +57,11 @@ html {
 body {
   margin: 0; }
 
+html,
+body {
+  overflow-x: hidden;
+  width: 100%; }
+
 /**
      * Render the `main` element consistently in IE.
      */
@@ -343,18 +348,26 @@ template {
 
 .login-section-wrapper {
   display: flex;
-  justify-content: center; }
-  .login-section-wrapper .login-section {
-    border: 1px solid black; }
-    .login-section-wrapper .login-section .login-form {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center; }
-      .login-section-wrapper .login-section .login-form .login-form-login-button {
-        border: 1px solid black; }
-      .login-section-wrapper .login-section .login-form .login-form-regist-button {
-        border: 1px solid black; }
+  height: 100vh;
+  justify-content: center;
+  align-items: center; }
+  .login-section-wrapper .login-form input {
+    width: 100%;
+    height: 38px;
+    border: 1px solid #baadad;
+    margin-bottom: 8px;
+    padding: 4px; }
+  .login-section-wrapper .login-form button {
+    width: 100%;
+    height: 38px;
+    background-color: #b2a8a8;
+    margin-bottom: 8px; }
+    .login-section-wrapper .login-form button:last-child {
+      background-color: #312525;
+      color: white; }
+    .login-section-wrapper .login-form button a {
+      text-decoration: none;
+      color: inherit; }
 
 .global-header {
   display: flex;
@@ -371,7 +384,9 @@ template {
     flex-grow: 1; }
     .global-header .header-nav :first-child {
       margin-right: 4px; }
-  .global-header .header-info {
+  .global-header .header-login {
+    margin-right: 12px; }
+  .global-header .header-user {
     margin-right: 12px; }
 
 .board-detail-list {
@@ -393,10 +408,15 @@ template {
     padding: 4px;
     background-color: #9f9494;
     border-radius: 2px; }
+    .board-form-header .board-write a {
+      text-decoration: none;
+      color: inherit; }
 
 .paging {
   display: flex;
   justify-content: center; }
+  .paging .prev-page {
+    margin-right: 4px; }
 
 .board-item-list {
   height: 40px;
@@ -413,5 +433,189 @@ template {
     font-size: 4px; }
     .board-item-list .board-item-desc :nth-child(2) {
       margin: 0 4px 0 4px; }
+
+.board-item {
+  text-decoration: none;
+  color: inherit; }
+
+.write-form #writer {
+  width: 50vw;
+  height: 38px;
+  padding: 2px;
+  border: 1px solid #969292;
+  margin-right: 2px; }
+
+.write-form #title {
+  width: 100%;
+  height: 38px;
+  padding: 2px;
+  margin-bottom: 8px;
+  border: 1px solid #969191; }
+
+.write-form #detail {
+  width: 100%;
+  resize: none;
+  padding: 2px;
+  border: 1px solid #969191; }
+
+.write-form #password {
+  width: 100%;
+  height: 38px;
+  padding: 2px;
+  border: 1px solid #969292;
+  margin-right: 2px;
+  margin-bottom: 4px; }
+
+.write-form .write-desc {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px; }
+  .write-form .write-desc .write-theme-list {
+    padding-left: 0;
+    margin-bottom: 0;
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center; }
+    .write-form .write-desc .write-theme-list .write-theme-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 38px;
+      background-color: #433a3a; }
+      .write-form .write-desc .write-theme-list .write-theme-item button {
+        color: white; }
+
+.write-form .write-form-submit-button {
+  width: 100%;
+  height: 32px;
+  background-color: #504646;
+  color: white; }
+
+.read-form .read-form-header {
+  border-bottom: 1px solid #baa3a3;
+  margin-bottom: 12px; }
+  .read-form .read-form-header h2 {
+    font-weight: 700;
+    font-size: 18px;
+    margin: 0;
+    margin-bottom: 4px; }
+  .read-form .read-form-header span {
+    font-size: 12px; }
+    .read-form .read-form-header span::after {
+      content: '|';
+      margin: 0 3px 0 3px;
+      opacity: 0.4;
+      font-size: 4px; }
+
+.read-form .read-form-main {
+  margin-bottom: 128px; }
+
+.read-form .read-form-button {
+  display: flex;
+  justify-content: end;
+  border-top: 1px solid #baa3a3; }
+  .read-form .read-form-button #read-form-auth {
+    margin-top: 4px;
+    margin-right: 4px;
+    padding: 2px;
+    flex-grow: 1;
+    width: 50%;
+    height: 32px;
+    border: 1px solid #baa3a3; }
+  .read-form .read-form-button button {
+    margin-top: 4px;
+    border: 1px solid #4d4242;
+    padding: 2px;
+    background-color: #555367;
+    color: white; }
+  .read-form .read-form-button .read-form-modify {
+    margin-right: 4px; }
+  .read-form .read-form-button .read-form-remove {
+    margin-right: 4px; }
+  .read-form .read-form-button .read-form-board a {
+    text-decoration: none;
+    color: inherit; }
+
+.modify-form #writer {
+  width: 50vw;
+  height: 38px;
+  padding: 2px;
+  border: 1px solid #969292;
+  margin-right: 2px; }
+
+.modify-form #title {
+  width: 100%;
+  height: 38px;
+  padding: 2px;
+  margin-bottom: 8px;
+  border: 1px solid #969191; }
+
+.modify-form #detail {
+  width: 100%;
+  resize: none;
+  padding: 2px;
+  border: 1px solid #969191; }
+
+.modify-form #password {
+  width: 100%;
+  height: 38px;
+  padding: 2px;
+  border: 1px solid #969292;
+  margin-right: 2px;
+  margin-bottom: 4px; }
+
+.modify-form .modify-desc {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px; }
+  .modify-form .modify-desc .modify-theme-list {
+    padding-left: 0;
+    margin-bottom: 0;
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center; }
+    .modify-form .modify-desc .modify-theme-list .modify-theme-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 38px;
+      background-color: #433a3a; }
+      .modify-form .modify-desc .modify-theme-list .modify-theme-item button {
+        color: white; }
+
+.modify-form .modify-form-submit-button {
+  width: 100%;
+  height: 32px;
+  background-color: #504646;
+  color: white; }
+
+.regist-form {
+  margin-top: 16px; }
+  .regist-form span {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 700; }
+  .regist-form input {
+    padding: 4px;
+    border: 1px solid #9e9a9a;
+    width: 100%;
+    height: 38px;
+    margin-bottom: 4px; }
+  .regist-form select {
+    width: 100%;
+    height: 38px;
+    background-color: #b7afaf;
+    margin-bottom: 4px; }
+  .regist-form button {
+    margin-top: 32px;
+    width: 100%;
+    height: 38px;
+    background-color: #b7afaf; }
+  .regist-form .regist-id {
+    margin-bottom: 16px; }
 
 /*# sourceMappingURL=index.css.map */

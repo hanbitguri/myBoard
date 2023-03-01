@@ -14,7 +14,7 @@ function Header() {
         <button><Link to={'/board'}>게시판</Link></button>
         </nav>
 
-        {authContext.isLogin ? <div>회원님</div> : <button className='header-info'><Link to={'/login'}>로그인</Link></button>}
+        {authContext.isLogin ? <div className='header-user'>회원님</div> : <button className='header-login'><Link to={'/login'}>로그인</Link></button>}
     </header>
         )
       }}

@@ -1,11 +1,14 @@
 import React, { useRef, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
-function Write() {
+function Write({fetchData}) {
     const [enteredTitle,setEnteredTitle] = useState('')
     const [detail,setDetail] = useState('')
     const [writer,setWriter] = useState('')
-    const [theme,setTheme] = useState('')
+    const [theme,setTheme] = useState('자유')
     const [password,setPassword] = useState('')
+    const navigation = useNavigate()
+
   return (
     <form onSubmit={(e)=>{
         e.preventDefault();
@@ -22,6 +25,9 @@ function Write() {
             }),
             header:{'Content-Type': 'application/json'}
         })
+        fetchData()
+        navigation('/board')
+        
     }} className='write-form'>
 
         <div className='write-desc'>

@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 
-function Modify({boardItem}) {
+function Modify({boardItem,fetchData}) {
     const param = useParams()
     const [enteredTitle,setEnteredTitle] = useState('')
     const [detail,setDetail] = useState('')
-    const [writer,setWriter] = useState('')
+    //const [writer,setWriter] = useState('')
     const [theme,setTheme] = useState('자유')
-    const [password,setPassword] = useState('')
+    //const [password,setPassword] = useState('')
+    const navigation = useNavigate()
   return (
     <form onSubmit={(e)=>{
         e.preventDefault();
@@ -18,11 +19,14 @@ function Modify({boardItem}) {
                 detail:detail,
             }),
         })
+        fetchData()
+        alert('게시글이 수정되었습니다.')
+        navigation('/board')
     }} className='modify-form'>
 
         <div className='modify-desc'>
         <input type="text" id='writer' placeholder='작성자' value={`${boardItem[param.id].writer}`} onChange={(e)=>{
-            setWriter(e.target.value)
+            //setWriter(e.target.value)
         }} maxLength='5' readOnly />
 
         <ul className='modify-theme-list' >
@@ -49,7 +53,7 @@ function Modify({boardItem}) {
         }}></textarea>
 
         <input type="password" id='password' placeholder='비밀번호' value={`${boardItem[param.id].password}`} onChange={(e)=>{
-            setPassword(e.target.value)
+            //setPassword(e.target.value)
         }} maxLength='5' readOnly />
         <button type="submit" className='modify-form-submit-button'>수정하기</button>
     </form>
