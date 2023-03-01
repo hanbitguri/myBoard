@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 function LoginForm() {
+//   useEffect(()=>{
+//     fetch('https://react-http-9dfc2-default-rtdb.firebaseio.com/user.json')
+//     .then(resp=>resp.json())
+//     .then(data=>console.log(data))
+//  },[])
   return (
     <div className='login-section-wrapper'>
-    
         <form className='login-form'>
             <h2>Login</h2>
             <input className='login-form-id-input' type="text" placeholder='아이디를 입력하세요'/>
