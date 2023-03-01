@@ -1,0 +1,72 @@
+.modify-form{
+    #writer{
+        width: 50vw;
+        height: 38px;
+        padding: 2px;
+        border: 1px solid hsl(0, 2%, 58%);
+        margin-right: 2px;
+    }
+
+    #title{
+        width: 100%;
+        height: 38px;
+        padding: 2px;
+        margin-bottom: 8px;
+        border: 1px solid rgb(150, 145, 145);
+    }
+    #detail{
+        width: 100%;
+        resize: none;
+        padding: 2px;
+        border: 1px solid rgb(150, 145, 145);
+    }
+    #password{
+        width: 100%;
+        height: 38px;
+        padding: 2px;
+        border: 1px solid hsl(0, 2%, 58%);
+        margin-right: 2px;
+        margin-bottom: 4px;
+    }
+    .modify-desc{
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+
+        .modify-theme-list{
+        
+        padding-left: 0;
+        margin-bottom: 0;
+        display: flex;
+        
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+        .modify-theme-item{
+            display: flex;
+            
+            justify-content: center;
+            align-items: center;
+            
+            width: 100%;
+            height: 38px;
+            background-color: rgb(67, 58, 58);
+            button{
+                color: white;
+            }
+            
+            
+            
+            
+        }
+    
+        }
+        
+    }
+    .modify-form-submit-button{
+        width: 100%;
+        height: 32px;
+        background-color: #504646;
+        color: white;
+    }
+}
