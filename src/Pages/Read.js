@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import InputComment from '../Components/InputComment';
-
+import Comments from '../Components/Comments';
 
 function Read({boardItem,fetchData}) {
   const param = useParams()
@@ -48,8 +48,8 @@ function Read({boardItem,fetchData}) {
         }}>삭제</button>
         <button className='read-form-board'><Link to={'/board'}>글목록</Link></button>
       </div>
-
-      <InputComment boardItem={boardItem}></InputComment>
+      <Comments boardItem={boardItem}></Comments>
+      <InputComment boardItem={boardItem} fetchData={fetchData}></InputComment>
     </section>
 
         
