@@ -22,6 +22,7 @@ function Write({fetchData}) {
                 viewPoint:0,
                 theme:theme,
                 password:password,
+                commentList:[],
             }),
             header:{'Content-Type': 'application/json'}
         })
