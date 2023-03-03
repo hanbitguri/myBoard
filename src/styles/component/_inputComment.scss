@@ -1,0 +1,33 @@
+.input-comment{
+    
+    margin-top: 48px;
+    
+    .comment-user{
+        .comment-writer{
+            padding: 2px;
+            width: 50%;
+            background-color: rgb(230, 221, 221);
+            border: 1px solid rgb(145, 137, 137);
+            
+        }
+        .comment-password{
+            padding: 2px;
+            width: 50%;
+            background-color: rgb(230, 221, 221);
+            border: 1px solid rgb(145, 137, 137);
+        }
+    }
+    .comment-detail{
+        padding: 2px;
+        width: 100%;
+        background-color: rgb(230, 221, 221);
+        border: 1px solid rgb(145, 137, 137);
+        border-top:none;
+        resize:none;
+    }
+    .comment-submit-button{
+        width: 100%;
+        background-color: #342323;
+        color: white;
+    }
+}
