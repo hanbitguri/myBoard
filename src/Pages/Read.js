@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
+import InputComment from '../Components/InputComment';
 
 
 function Read({boardItem,fetchData}) {
@@ -21,6 +22,7 @@ function Read({boardItem,fetchData}) {
       <div className='read-form-button'>
         <input type="password" id='read-form-auth' value={readPassword} placeholder='비밀번호' onChange={(e)=>{
           setReadPassword(e.target.value)
+          console.log(readPassword);
         }}/>
         <button className='read-form-modify' onClick={()=>{
             if(boardItem[param.id].password === readPassword){
@@ -46,6 +48,8 @@ function Read({boardItem,fetchData}) {
         }}>삭제</button>
         <button className='read-form-board'><Link to={'/board'}>글목록</Link></button>
       </div>
+
+      <InputComment boardItem={boardItem}></InputComment>
     </section>
 
         
