@@ -1,25 +1,41 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import Comment from './Comment'
+import CommentEmpty from './CommentEmpty'
+
 
 function Comments({boardItem}) {
     const param = useParams()
-    
-    console.log(boardItem[param.id].commentList);
-    console.log(Object.entries(boardItem[param.id].commentList))
+    const [commentCount,setCommentCount] = useState(0)
+    //const isComment = Object.keys(boardItem[param.id].commentList).length
+    const isComments = () =>{
+      if(!boardItem[param.id].commentList){
+        return 
+      }
+      return Object.keys(boardItem[param.id].commentList).length
+    }
+    const loaded = () => {
+      if(!boardItem[param.id].commentList){
+        return 
+      }
+      return Object.entries(boardItem[param.id].commentList)
+    }
+    //const loadedComments = Object.entries(boardItem[param.id].commentList)
 
-    const loadedComments = Object.entries(boardItem[param.id].commentList)
+    useEffect(()=>{
+      if(!boardItem[param.id].commentList){
+        return 
+      }
+      setCommentCount(Object.keys(boardItem[param.id].commentList).length)
+    },[])
   return (
     <>
+    <span className='comment-count'>전체댓글 {commentCount}개</span>
     {
-         loadedComments.map((comment)=>{
-            return(
-                <section className='user-comment'>
-                <strong>{comment[1].commentData.commentWriter}</strong>
-                <p>{comment[1].commentData.commentDetail}</p>
-                </section>
-            )
-         })
-    }
+      isComments() > 0 ? <Comment loaded={loaded}/> : <CommentEmpty/>
+     }
+   
+    
     </>
   )
 }

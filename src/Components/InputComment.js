@@ -53,7 +53,7 @@ function InputComment({boardItem,fetchData}) {
       fetchData()
       
 
-    }}>등록</button>
+    }}>댓글 등록</button>
     </form>
   )
 }

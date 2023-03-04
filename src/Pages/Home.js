@@ -30,19 +30,23 @@ function Home() {
           date:data[key].date,
           theme:data[key].theme,
           password:data[key].password,
+          commentList:data[key].commentList,
         })
       }
       setBoardItem(loadedBoard)
+      console.log(loadedBoard)
+      
     })
   }
   useEffect(fetchData,[])
+  
   
   
   return (
     <authContext.Provider value={{
       isLogin: isLogin,
   }}>
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
     <Header/>
     <div className="container">
       <div className="row">

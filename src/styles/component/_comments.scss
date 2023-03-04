@@ -1,4 +1,35 @@
 .user-comment{
+    border-bottom: 1px solid rgb(188, 180, 180);
+    
+    p{
+        margin: 0;
+        
+    }
+    strong{
+        
+        margin-right: 4px;
+        padding: 4px;
+        
+        &::after{
+            content: '|';
+            font-size: 16px;
+            margin-left: 4px;
+            color: rgb(173, 173, 163);
+            font-weight: 400;
+
+        }
+    }
+    background-color: rgb(222, 221, 219);
+    
     display: flex;
-   
+    align-items: center;
+}
+.comment-count{
+    font-weight: 700;
+    display: block;
+    border-bottom: 1px solid rgb(188, 180, 180);
+    
+}
+.comment-empty{
+    margin-top: 2px;
 }
