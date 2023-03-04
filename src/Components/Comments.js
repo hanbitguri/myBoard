@@ -8,6 +8,11 @@ function Comments({boardItem}) {
     const param = useParams()
     const [commentCount,setCommentCount] = useState(0)
     //const isComment = Object.keys(boardItem[param.id].commentList).length
+    const removeComment = () => {
+      fetch(`https://react-http-9dfc2-default-rtdb.firebaseio.com/post/${boardItem[param.id].id}/commentList.json`,{
+        method:"DELETE",
+      })
+    }
     const isComments = () =>{
       if(!boardItem[param.id].commentList){
         return 

@@ -515,7 +515,8 @@ template {
 .read-form .read-form-button {
   display: flex;
   justify-content: end;
-  border-top: 1px solid #baa3a3; }
+  border-top: 1px solid #baa3a3;
+  margin-bottom: 12px; }
   .read-form .read-form-button #read-form-auth {
     margin-top: 4px;
     margin-right: 4px;
@@ -617,5 +618,65 @@ template {
     background-color: #b7afaf; }
   .regist-form .regist-id {
     margin-bottom: 16px; }
+
+.input-comment {
+  margin-top: 16px; }
+  .input-comment .comment-user .comment-writer {
+    padding: 2px;
+    width: 50%;
+    background-color: #e6dddd;
+    border: 1px solid #918989; }
+  .input-comment .comment-user .comment-password {
+    padding: 2px;
+    width: 50%;
+    background-color: #e6dddd;
+    border: 1px solid #918989; }
+  .input-comment .comment-detail {
+    padding: 2px;
+    width: 100%;
+    background-color: #e6dddd;
+    border: 1px solid #918989;
+    border-top: none;
+    resize: none; }
+  .input-comment .comment-submit-button {
+    width: 100%;
+    background-color: #342323;
+    color: white; }
+
+.user-comment {
+  border-bottom: 1px solid #bcb4b4;
+  background-color: #dedddb;
+  display: flex;
+  align-items: center; }
+  .user-comment p {
+    margin: 0;
+    flex-grow: 1; }
+  .user-comment strong {
+    margin-right: 4px;
+    padding: 4px; }
+    .user-comment strong::after {
+      content: '|';
+      font-size: 16px;
+      margin-left: 4px;
+      color: #adada3;
+      font-weight: 400; }
+
+.comment-count {
+  font-weight: 700;
+  display: block;
+  border-bottom: 1px solid #bcb4b4; }
+
+.comment-empty {
+  margin-top: 2px; }
+
+.comment-delete {
+  background-color: #463636;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 4px;
+  color: white; }
 
 /*# sourceMappingURL=index.css.map */

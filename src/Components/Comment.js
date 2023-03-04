@@ -10,6 +10,7 @@ function Comment({loaded}) {
               <h1 className='visually-hidden'>유저 코멘트</h1>  
               <strong>{comment[1].commentData.commentWriter}</strong>
               <p>{comment[1].commentData.commentDetail}</p>
+              <button className='comment-delete'>X</button>
               </section>
           )
        })
