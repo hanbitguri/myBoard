@@ -1,21 +1,33 @@
-import React from 'react'
+import React, { useState } from 'react'
+import {AiOutlineClose} from "react-icons/ai";
 
-function Comment({loaded}) {
+function Comment({loaded,removeComment}) {
+  
+  
   return (
-    <>
+    <div>
     {
-        loaded().map((comment)=>{
+        loaded().map((comment,index)=>{
           return(
-              <section className='user-comment' key={comment[1].name}>
-              <h1 className='visually-hidden'>유저 코멘트</h1>  
+              <section className='user-comment' key={index} >
+              <h1 className='visually-hidden'>유저 댓글</h1>  
               <strong>{comment[1].commentData.commentWriter}</strong>
               <p>{comment[1].commentData.commentDetail}</p>
-              <button className='comment-delete'>X</button>
+              
+              <button className='comment-delete' onClick={(e)=>{
+                e.preventDefault()
+                  const password = prompt('비밀번호를 입력하세요')
+                  if(password !== comment[1].commentData.commentPassword){
+                    return
+                  }
+                  removeComment()
+              }
+                } ><AiOutlineClose/></button>
               </section>
           )
        })
     }
-    </>
+    </div>
   )
 }
 

@@ -3,38 +3,42 @@ import { Link } from 'react-router-dom'
 
 function BoardItem({boardItem}) {
   return (
-    <>
+    <ul className='board-item-list'>
         {
         boardItem.map((item,index)=>{
             return (
-                <Link to={`/board/${index}`} className='board-item' key={item.id} onClick={()=>{
+              <li className='board-item'>
+                <Link to={`/board/${index}`} key={item.id} onClick={()=>{
                   fetch(`https://react-http-9dfc2-default-rtdb.firebaseio.com/post/${item.id}.json`,{
                     method:"PATCH",
                     body:JSON.stringify({
                       viewPoint:item.viewPoint + 1,
                     })
                   })
-
                 }}>
-                <ul className='board-item-list'>
-                    <div className='board-item-main'>
-                    {/* <li>{index}</li> */}
-                    <li className='board-item-theme'>[{item.theme}]</li>
-                    <li >{item.title}</li>
+                    <article className='board-item-detail'>
+
+                    <div className='board-item-detail-main'>
+                    <h2 className='visually-hidden'>게시판 아이템</h2>
+                    <span className='board-item-detail-theme'>[{item.theme}]</span>
+                    <strong className='board-item-detail-title'>{item.title}</strong>
                     </div>
-                    <div className='board-item-desc'>
-                    <li>조회수: {item.viewPoint}</li>
-                    <li>게시일: {item.date}</li>
-                    <li>글쓴이: {item.writer}</li>
-                    </div>
-                </ul>
+
+                    <dl className='board-item-detail-desc'>
+                    <dt>조회수:</dt> <dd>{item.viewPoint}</dd>
+                    <dt>게시일:</dt> <dd>{item.date}</dd>
+                    <dt>글쓴이:</dt> <dd>{item.writer}</dd>
+                    </dl>
+
+                    </article>
                 </Link>
+              </li>
             )
         
     
         })
         }
-    </>
+    </ul>
         
     
   )
