@@ -1,11 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import BoardItem from '../Components/BoardItem'
-import authContext from '../Store/auth-context'
 function Board({boardItem}) {
-  return (
-    <authContext.Consumer>
-    {(auth)=>{
+  
       return(
         <section className='board-form'>
       <div className='board-form-header'>
@@ -28,9 +25,9 @@ function Board({boardItem}) {
       </span>
     </section>
       )
-    }}
-    </authContext.Consumer>
-  )
+    
+   
+  
 }
 
 export default Board
