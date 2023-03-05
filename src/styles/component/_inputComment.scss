@@ -3,31 +3,31 @@
     margin-top: 16px;
     
     .comment-user{
+        font-size: 14px;
         .comment-writer{
             padding: 2px;
             width: 50%;
-            background-color: rgb(230, 221, 221);
+            border-right: none;
             border: 1px solid rgb(145, 137, 137);
-            
         }
         .comment-password{
             padding: 2px;
             width: 50%;
-            background-color: rgb(230, 221, 221);
+           
             border: 1px solid rgb(145, 137, 137);
         }
     }
     .comment-detail{
         padding: 2px;
         width: 100%;
-        background-color: rgb(230, 221, 221);
+        
         border: 1px solid rgb(145, 137, 137);
         border-top:none;
         resize:none;
     }
     .comment-submit-button{
         width: 100%;
-        background-color: #342323;
+        background-color: rgb(85, 83, 103);
         color: white;
     }
 }

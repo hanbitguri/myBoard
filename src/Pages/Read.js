@@ -9,7 +9,7 @@ function Read({boardItem,fetchData}) {
   const navigate = useNavigate();
 
   return (
-    <section className='read-form'>
+    <form className='read-form'>
       <div className='read-form-header'>
       <h2>[{boardItem[param.id].theme}]{boardItem[param.id].title}</h2>
       <span>{boardItem[param.id].writer}</span>
@@ -48,9 +48,10 @@ function Read({boardItem,fetchData}) {
         }}>삭제</button>
         <button className='read-form-board'><Link to={'/board'}>글목록</Link></button>
       </div>
-      <Comments boardItem={boardItem}></Comments>
+
+      <Comments boardItem={boardItem} fetchData={fetchData}></Comments>
       <InputComment boardItem={boardItem} fetchData={fetchData}></InputComment>
-    </section>
+    </form>
 
         
     

@@ -7,7 +7,7 @@ function BoardItem({boardItem}) {
         {
         boardItem.map((item,index)=>{
             return (
-              <li className='board-item'>
+              <li className='board-item' key={item.id}>
                 <Link to={`/board/${index}`} key={item.id} onClick={()=>{
                   fetch(`https://react-http-9dfc2-default-rtdb.firebaseio.com/post/${item.id}.json`,{
                     method:"PATCH",

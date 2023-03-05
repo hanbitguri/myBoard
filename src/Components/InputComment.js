@@ -48,9 +48,11 @@ function InputComment({boardItem,fetchData}) {
             commentDetail
           }
         }),
+      }).then(()=>{
+        fetchData()
       })
       
-      fetchData()
+      
       
 
     }}>댓글 등록</button>

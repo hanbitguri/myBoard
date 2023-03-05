@@ -11,7 +11,7 @@ function Main() {
         게시판 페이징 만들기<br/>
         로그인 페이지 없애기<br/>
         CSS 작업하기<br/>
-        깃페이지에 SPA호스팅해보기<br/>
+        <br/>
         
       </p>
     </div>

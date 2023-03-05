@@ -10,6 +10,7 @@ import Regist from './Regist';
 import LoginForm from './LoginForm';
 import authContext from '../Store/auth-context';
 import Modify from './Modify';
+import Footer from '../Components/Footer';
 
 function Home() {
   const [boardItem,setBoardItem] = useState([])
@@ -43,9 +44,6 @@ function Home() {
   
   
   return (
-    <authContext.Provider value={{
-      isLogin: isLogin,
-  }}>
     <BrowserRouter basename={process.env.PUBLIC_URL}>
     <Header/>
     <div className="container">
@@ -66,8 +64,9 @@ function Home() {
       </div>
     </div>
     
+    <Footer></Footer>
     </BrowserRouter>
-    </authContext.Provider>
+    
   );
 }
 
