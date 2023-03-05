@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import authContext from '../Store/auth-context'
+import {AiTwotoneHome,AiFillFileText} from "react-icons/ai";
 
 function Header() {
   return (
@@ -8,13 +9,13 @@ function Header() {
       {(authContext)=>{
         return (
         <header className='global-header'>
-        <h2 className='header-logo'>★</h2>
+        
         <nav className='header-nav'>
-        <button><Link to={'/'}>홈</Link></button>
-        <button><Link to={'/board'}>게시판</Link></button>
+        <button className='global-header-home-button'><Link to={'/'}><AiTwotoneHome/></Link></button>
+        <button className='global-header-board-button'><Link to={'/board'}><AiFillFileText/></Link></button>
         </nav>
 
-        {authContext.isLogin ? <div className='header-user'>회원님</div> : <button className='header-login'><Link to={'/login'}>로그인</Link></button>}
+      
     </header>
         )
       }}
