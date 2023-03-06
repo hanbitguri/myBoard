@@ -5,9 +5,7 @@ function Modify({boardItem,fetchData}) {
     const param = useParams()
     const [enteredTitle,setEnteredTitle] = useState('')
     const [detail,setDetail] = useState('')
-    //const [writer,setWriter] = useState('')
     const [theme,setTheme] = useState('자유')
-    //const [password,setPassword] = useState('')
     const navigation = useNavigate()
   return (
     <form onSubmit={(e)=>{

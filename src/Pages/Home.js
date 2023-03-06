@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css'; // 그리드 만 빼옴
-import { useCallback, useEffect,useState } from 'react';
+import {useEffect,useState } from 'react';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import Header from '../Components/Header';
 import Main from './Main';
@@ -8,13 +8,12 @@ import Write from '../Components/Write';
 import Read from './Read';
 import Regist from './Regist';
 import LoginForm from './LoginForm';
-import authContext from '../Store/auth-context';
 import Modify from './Modify';
 import Footer from '../Components/Footer';
 
 function Home() {
   const [boardItem,setBoardItem] = useState([])
-  const [isLogin,setIsLogin] = useState(false);
+  
   const fetchData = () =>{
     console.log('fetch data')
     fetch('https://react-http-9dfc2-default-rtdb.firebaseio.com/post.json')
@@ -39,6 +38,7 @@ function Home() {
       
     })
   }
+  
   useEffect(fetchData,[])
   
   
@@ -52,7 +52,7 @@ function Home() {
           <Routes>
           
           <Route path='/' element={<Main></Main>}/>
-          <Route path='/board' element={<Board boardItem={boardItem}></Board>}/>
+          <Route path='/board/' element={<Board boardItem={boardItem} fetchData={fetchData}></Board>}/>
           <Route path='/board/write' element={<Write fetchData={fetchData}></Write>}/>
           <Route path='/board/:id' element={<Read boardItem={boardItem} fetchData={fetchData}/>}/>
           <Route path='/regist' element={<Regist/>}/>

@@ -22,11 +22,9 @@ function Read({boardItem,fetchData}) {
       <div className='read-form-button'>
         <input type="password" id='read-form-auth' value={readPassword} placeholder='비밀번호' onChange={(e)=>{
           setReadPassword(e.target.value)
-          console.log(readPassword);
         }}/>
         <button className='read-form-modify' onClick={()=>{
             if(boardItem[param.id].password === readPassword){
-              
               navigate(`/read/${param.id}/modify`)
             }else{
               alert('비밀번호가 맞지 않습니다.')
@@ -40,8 +38,6 @@ function Read({boardItem,fetchData}) {
               alert('게시글이 삭제되었습니다.')
               fetchData()
               navigate('/board')
-
-
             }else{
               alert('비밀번호가 맞지 않습니다.')
             }

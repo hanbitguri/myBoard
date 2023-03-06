@@ -448,9 +448,11 @@ template {
 .paging {
   display: flex;
   justify-content: center;
-  margin-bottom: 48px; }
+  margin-bottom: 48px;
+  font-size: 16px;
+  font-weight: 700; }
   .paging .prev-page {
-    margin-right: 4px; }
+    margin-right: 12px; }
 
 .board-item-list {
   padding: 0;
