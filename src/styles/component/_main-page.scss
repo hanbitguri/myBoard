@@ -1,3 +1,52 @@
-.main-intro{
-    
+.main-page{
+    ul,li{
+        margin: 0;
+        padding: 0;
+    }
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
+    .main-intro{
+        font-size: 12px;
+    }
+    .main-tech-stack{
+        margin-bottom: 8px;
+        :last-child{
+            margin-bottom: 0;
+        }
+        h2{
+            font-weight: 700;
+        }
+        svg{
+            margin-right: 4px;
+            font-size: 24px;
+        }
+        li{
+            display: flex;
+            margin-bottom: 2px;
+            
+            
+        }
+    }
+    .main-project-category{
+        margin-bottom: 8px;
+        h2{
+            font-weight: 700;
+        }
+    }
+    .main-social{
+        h2{
+            font-weight: 700;
+        }
+        svg{
+            font-size: 32px;
+            margin-right: 4px;
+        }
+        li{
+            display: flex;
+            align-items: center;
+            
+        }
+    }
 }
