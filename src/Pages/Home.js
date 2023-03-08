@@ -10,6 +10,7 @@ import Regist from './Regist';
 import LoginForm from './LoginForm';
 import Modify from './Modify';
 import Footer from '../Components/Footer';
+import Homework from './Homework';
 
 function Home() {
   const [boardItem,setBoardItem] = useState([])
@@ -58,6 +59,8 @@ function Home() {
           <Route path='/regist' element={<Regist/>}/>
           <Route path='/login' element={<LoginForm/>}/>
           <Route path='/read/:id/modify' element={<Modify boardItem={boardItem} fetchData={fetchData}/>}/>
+          <Route path='/homework' element={<Homework/>}/>
+
           </Routes>
           
         </div>
