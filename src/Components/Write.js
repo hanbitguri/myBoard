@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 function Write({fetchData}) {
@@ -46,8 +46,8 @@ function Write({fetchData}) {
             }}>정보</button></li>
             <li className='write-theme-item'><button onClick={(e)=>{
                 e.preventDefault()
-                setTheme('망상')
-            }}>망상</button></li>
+                setTheme('상상')
+            }}>상상</button></li>
         </ul>
         </div>
 
