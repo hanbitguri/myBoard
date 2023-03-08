@@ -1,5 +1,5 @@
 .user-comment{
-    border-bottom: 1px solid rgb(188, 180, 180);
+    border-bottom: 1px solid $border-second;
     
     p{
         margin: 0;
@@ -14,12 +14,12 @@
             content: '|';
             font-size: 16px;
             margin-left: 4px;
-            color: rgb(173, 173, 163);
+            color: $primary-first;
             font-weight: 400;
 
         }
     }
-    background-color: rgb(241, 234, 234);
+    background-color: $primary-first;
     
     display: flex;
     align-items: center;
@@ -27,15 +27,15 @@
 .comment-count{
     font-weight: 700;
     display: block;
-    border-bottom: 1px solid rgb(188, 180, 180);
+    border-bottom: 1px solid $border-second;
     
 }
 .comment-empty{
     margin-top: 2px;
 }
 .comment-delete{
-    background-color: rgb(85, 83, 103);
-    color: white;
+    background-color: $primary-second;
+    color: $primary-first;
     width: 16px;
     height: 16px;
     display: flex;

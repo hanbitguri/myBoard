@@ -8,26 +8,26 @@
             padding: 2px;
             width: 50%;
             border-right: none;
-            border: 1px solid rgb(145, 137, 137);
+            border: 1px solid $border-first;
         }
         .comment-password{
             padding: 2px;
             width: 50%;
            
-            border: 1px solid rgb(145, 137, 137);
+            border: 1px solid $border-first;
         }
     }
     .comment-detail{
         padding: 2px;
         width: 100%;
         
-        border: 1px solid rgb(145, 137, 137);
+        border: 1px solid $border-first;
         border-top:none;
         resize:none;
     }
     .comment-submit-button{
         width: 100%;
-        background-color: rgb(85, 83, 103);
-        color: white;
+        background-color: $primary-second;
+        color: $primary-first;
     }
 }

@@ -3,7 +3,7 @@
     
     display: flex;
     align-items: center;
-    background-color: rgb(241, 234, 234);
+    background-color: $primary-first;
     margin-bottom: 12px;
     height: 32px;
     a{
@@ -11,7 +11,8 @@
         color: inherit;
     }
     .global-header-home-button,
-    .global-header-board-button
+    .global-header-board-button,
+    .global-header-homework-button
     {
         width: 32px;
         height: 32px;

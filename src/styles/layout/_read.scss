@@ -1,7 +1,7 @@
 .read-form{
     
     .read-form-header{
-        border-bottom: 1px solid rgb(186, 163, 163);
+        border-bottom: 1px solid $border-first;
         margin-bottom: 12px;
         h2{
             font-weight: 700;
@@ -28,7 +28,7 @@
     .read-form-button{
         display: flex;
         justify-content: end;
-        border-top: 1px solid rgb(186, 163, 163);
+        border-top: 1px solid $border-first;
         margin-bottom: 12px;
         #read-form-auth{
             margin-top: 4px;
@@ -37,13 +37,13 @@
             flex-grow: 1;
             width: 50%;
             height: 32px;
-            border: 1px solid rgb(186, 163, 163);
+            border: 1px solid $border-first;
         }
         button{
             margin-top: 4px;
-            border: 1px solid rgb(77, 66, 66);
+            border: 1px solid $border-first;
             padding: 2px;
-            background-color: rgb(85, 83, 103);
+            background-color: $primary-second;
             color: white;
         }
         .read-form-modify{
