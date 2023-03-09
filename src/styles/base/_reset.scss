@@ -1,16 +1,17 @@
 * {
     margin: 0;
+    
     //font-family: $font-main;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     box-sizing: border-box;
   }
   html {
-    //font-family: //폰트;
+    
     //font-size: //폰트사이즈;
   }
   body {
-    //font-family: $font-main;
+    
     //color: $primary-first;
   }
   h1,h2 {
@@ -39,7 +40,7 @@
   ul,
   ol {
     list-style: none;
-    padding-left: 0;
+    padding: 0;
   }
   
   button {

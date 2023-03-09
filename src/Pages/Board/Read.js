@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
-import InputComment from '../Components/InputComment';
-import Comments from '../Components/Comments';
+import InputComment from '../../Components/Board/InputComment';
+import Comments from '../../Components/Board/Comments';
 
 function Read({boardItem,fetchData}) {
   const param = useParams()
   const [readPassword,setReadPassword] = useState('')
   const navigate = useNavigate();
-
+  
   return (
     <form className='read-form'>
       <div className='read-form-header'>

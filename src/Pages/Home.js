@@ -1,16 +1,17 @@
 import 'bootstrap/dist/css/bootstrap.min.css'; // 그리드 만 빼옴
 import {useEffect,useState } from 'react';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
-import Header from '../Components/Header';
-import Main from './Main';
-import Board from './Board';
-import Write from '../Components/Write';
-import Read from './Read';
+import Header from '../Components/Global/Header';
+import Main from './Main/Main';
+import Board from './Board/Board';
+import Write from '../Components/Board/Write';
+import Read from './Board/Read';
 import Regist from './Regist';
 import LoginForm from './LoginForm';
-import Modify from './Modify';
-import Footer from '../Components/Footer';
-import Homework from './Homework';
+import Modify from './Board/Modify';
+import Footer from '../Components/Global/Footer';
+import Homework from './Homework/Homework';
+
 
 function Home() {
   const [boardItem,setBoardItem] = useState([])
@@ -60,7 +61,8 @@ function Home() {
           <Route path='/login' element={<LoginForm/>}/>
           <Route path='/read/:id/modify' element={<Modify boardItem={boardItem} fetchData={fetchData}/>}/>
           <Route path='/homework' element={<Homework/>}/>
-
+          
+          
           </Routes>
           
         </div>

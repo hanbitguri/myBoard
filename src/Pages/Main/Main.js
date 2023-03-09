@@ -4,6 +4,7 @@ import { CiInstagram } from "react-icons/ci";
 import { AiFillHtml5,} from "react-icons/ai";
 import { FaReact} from "react-icons/fa";
 import { DiJavascript} from "react-icons/di";
+import { Link } from 'react-router-dom';
 
 
 
@@ -27,10 +28,7 @@ function Main() {
 
       <div className='main-project-category'>
         <h2>프로젝트 카테고리</h2>
-        <ul>
-          <li><a href="http://hanbitguri.github.io/tomorrow-house"> 오늘의 집 클론코딩(내일의 집)</a></li>
-          <li><a href="http://hanbitguri.github.io/mylog">개인 블로그(myLog)</a></li>
-        </ul>
+           <span><Link to='/homework'>클릭하여 프로젝트 보러가기</Link></span>
       </div>
 
       <div className='main-social'>

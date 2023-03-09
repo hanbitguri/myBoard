@@ -1,20 +1,23 @@
-@import './base/reset';
-@import './base/normalize';
-//@import './base/globals';
-@import './component/loginform';
+@import './constants/colors';
+@import './constants/breakpoint';
 
-//
-@import './component/main-page';
-@import './component/header';
-@import './component/global-footer';
+@import './base/reset';
+@import './base/globals';
+
+@import './mixins/responsive';
+
 @import './layout/board';
-@import './component/boardItem';
 @import './layout/write';
 @import './layout/read';
 @import './layout/modify';
 @import './layout/regist';
+@import './layout/homework';
+@import './layout/signup';
 
-
+@import './component/loginform';
+@import './component/main-page';
+@import './component/header';
+@import './component/global-footer';
+@import './component/boardItem';
 @import './component/inputComment';
 @import './component/comments';
-@import './component/remove-comment';

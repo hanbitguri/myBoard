@@ -1,0 +1,32 @@
+.homework{
+    &-title{
+        font-weight: 700;
+        margin-bottom: 16px;
+    }
+    &-number{
+        display: block;
+        margin-bottom: 8px;
+    }
+    &-list{
+        padding: 0;
+        margin: 0;
+        .homework-list-contour{
+            display: block;
+            margin-bottom: 16px;
+            
+        }
+    }
+    &-item{
+        margin-bottom: 16px;
+        letter-spacing: -0.08em;
+        span{
+            margin-right: 8px;
+            color: rgb(210, 225, 230);
+        }
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+        
+    }
+}

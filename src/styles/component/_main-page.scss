@@ -8,7 +8,14 @@
         color: inherit;
     }
     .main-intro{
-        font-size: 12px;
+        font-size: 13px;
+        line-height: 16px;
+        letter-spacing: -0.05em;
+        @include desktop {
+            font-size: 32px;
+            line-height: 34px;
+            letter-spacing: -0.07em;
+        }
     }
     .main-tech-stack{
         margin-bottom: 8px;
@@ -25,14 +32,35 @@
         li{
             display: flex;
             margin-bottom: 2px;
-            
-            
+        }
+        @include desktop {
+            margin-bottom: 16px;
+            svg{
+                font-size: 40px;
+                margin-right: 8px;
+            }
+            li{
+                display: flex;
+                align-items: center;
+                font-size: 24px;
+            }
         }
     }
     .main-project-category{
         margin-bottom: 8px;
         h2{
             font-weight: 700;
+        }
+        span{
+            color: rgb(153, 175, 236);
+        }
+        @include desktop{
+            margin-bottom: 16px;
+       
+        span{
+            font-size: 22px;
+            color: rgb(153, 175, 236);
+        }
         }
     }
     .main-social{
@@ -47,6 +75,17 @@
             display: flex;
             align-items: center;
             
+        }
+        @include desktop{
+            svg{
+                font-size: 40px;
+            }
+            li{
+                display: flex;
+                align-items: center;
+            font-size: 22px;
+            
+        }
         }
     }
 }

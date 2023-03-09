@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { onChangeHandler } from '../Utils/EventHandler/OnChangeFunction'
+import { onChangeHandler } from '../../Utils/EventHandler/OnChangeFunction'
 
 function InputComment({boardItem,fetchData}) {
   const [commentWriter,setCommentWriter] =  useState('')
