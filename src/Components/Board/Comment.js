@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import {AiOutlineClose} from "react-icons/ai";
 
 function Comment({loaded,removeComment}) {
-  
-  
+
+ 
   return (
     <div>
     {
@@ -16,11 +16,12 @@ function Comment({loaded,removeComment}) {
               
               <button className='comment-delete' onClick={(e)=>{
                 e.preventDefault()
+                
                   const password = prompt('비밀번호를 입력하세요')
                   if(password !== comment[1].commentData.commentPassword){
                     return
                   }
-                  removeComment()
+                  removeComment(index)
               }
                 } ><AiOutlineClose/></button>
               </section>
