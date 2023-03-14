@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import {AiOutlineClose} from "react-icons/ai";
 
 function Comment({loaded,removeComment}) {
@@ -19,6 +19,7 @@ function Comment({loaded,removeComment}) {
                 
                   const password = prompt('비밀번호를 입력하세요')
                   if(password !== comment[1].commentData.commentPassword){
+                    alert('비밀번호가 맞지 않습니다.')
                     return
                   }
                   removeComment(index)

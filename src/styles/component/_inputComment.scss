@@ -1,6 +1,6 @@
 .input-comment{
     
-    margin-top: 16px;
+    margin-top: 20px;
     
     .comment-user{
         font-size: 14px;
@@ -29,5 +29,8 @@
         width: 100%;
         background-color: $primary-second;
         color: $primary-first;
+    }
+    @include desktop{
+        margin-top: 48px;
     }
 }

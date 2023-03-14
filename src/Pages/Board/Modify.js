@@ -7,6 +7,7 @@ function Modify({boardItem,fetchData}) {
     const [detail,setDetail] = useState('')
     const [theme,setTheme] = useState('자유')
     const navigation = useNavigate()
+
   return (
     <form onSubmit={(e)=>{
         e.preventDefault();

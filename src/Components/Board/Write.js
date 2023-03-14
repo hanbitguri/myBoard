@@ -60,6 +60,7 @@ function Write({fetchData}) {
         <input type="password" id='password' placeholder='비밀번호' value={password} onChange={(e)=>{
             setPassword(e.target.value)
         }} maxLength='5' />
+        
         <button type="submit" className='write-form-submit-button'>글쓰기</button>
     </form>
   )

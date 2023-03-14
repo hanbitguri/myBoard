@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import BoardItem from '../../Components/Board/BoardItem'
 
 function Board({boardItem,fetchData}) {
+      
       useEffect(fetchData,[])
       const [firstIndex,setFirstIndex] = useState(0)
       const [lastIndex,setLastIndex] = useState(10)
@@ -21,6 +22,7 @@ function Board({boardItem,fetchData}) {
       }
       
       return(
+      
       <section className='board-form'>
         <div className='board-form-header'>
           <h2 className='board-title'>게시판</h2>
@@ -42,6 +44,7 @@ function Board({boardItem,fetchData}) {
         }}>next</button>
       </span>
     </section>
+    
       )
     
    

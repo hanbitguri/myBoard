@@ -43,16 +43,18 @@
         justify-content: center;
         align-items: center;
         .write-theme-item{
+            margin-right: 1px;
             display: flex;
-            
             justify-content: center;
             align-items: center;
             
             width: 100%;
             height: 38px;
-            background-color: rgb(67, 58, 58);
+            background-color: $primary-second;
             button{
                 color: white;
+                width: 100%;
+                
             }
             
             
@@ -66,7 +68,7 @@
     .write-form-submit-button{
         width: 100%;
         height: 32px;
-        background-color: #504646;
+        background-color: $primary-second;
         color: white;
     }
 }

@@ -2,40 +2,41 @@
     
     
     display: flex;
+    justify-content: center;
     align-items: center;
-    background-color: $primary-first;
+    margin-top: 12px;
     margin-bottom: 12px;
+    
     height: 32px;
+    border-bottom: 1px solid $border-first;
+
     a{
+        display: block;
         text-decoration: none;
         color: inherit;
-    }
-    .global-header-home-button,
-    .global-header-board-button,
-    .global-header-homework-button
-    {
-        width: 32px;
-        height: 32px;
+        margin-bottom: 12px;
         font-size: 24px;
+        @include desktop{
+            font-size: 40px;
+        }
     }
-    
+    @include desktop {
+        height: 48px;
+        
+    }
     
     .header-nav{
-        margin-left: 4px;
         padding: 2px;
         a{
             display: flex;
-            justify-content: center;
+            justify-content:start;
             align-items: center;
+        
             
         }
        
+       
     }
-    .header-login{
-        margin-right: 12px;
-    }
-    .header-user{
-        margin-right: 12px;
-    }
+    
 
 }

@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Link, useNavigate, useParams } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { Link, useNavigate, useParams} from 'react-router-dom'
 import InputComment from '../../Components/Board/InputComment';
 import Comments from '../../Components/Board/Comments';
 
@@ -7,9 +7,10 @@ function Read({boardItem,fetchData}) {
   const param = useParams()
   const [readPassword,setReadPassword] = useState('')
   const navigate = useNavigate();
-  
+  useEffect(fetchData,[])
   return (
     <form className='read-form'>
+      
       <div className='read-form-header'>
       <h2>[{boardItem[param.id].theme}]{boardItem[param.id].title}</h2>
       <span>{boardItem[param.id].writer}</span>
@@ -28,6 +29,7 @@ function Read({boardItem,fetchData}) {
               navigate(`/read/${param.id}/modify`)
             }else{
               alert('비밀번호가 맞지 않습니다.')
+              navigate(`/`)
             }
         }}>수정</button>
         <button className='read-form-remove'  onClick={()=>{

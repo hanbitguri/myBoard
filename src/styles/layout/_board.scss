@@ -26,7 +26,6 @@
         }
     }
 }
-
 .paging{
     display: flex;
     justify-content: center;
@@ -35,5 +34,10 @@
     font-weight: 700;
     .prev-page{
         margin-right: 12px;
+    }
+}
+.board-wrapper{
+    @include desktop{
+        display: flex;
     }
 }
