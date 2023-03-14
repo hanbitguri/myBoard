@@ -1,70 +1,92 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+<br/>
+<p align="middle">
+  <img width="250px;" src="https://user-images.githubusercontent.com/107792728/225027616-af7d5fa0-0211-4cea-892b-4a3107951525.png"/>
+</p>
+<h2 align="middle">JS 문벅스 카페메뉴 앱</h2>
+<p align="middle">Vanilla JS로 구현 하는 상태관리가 가능한 카페메뉴 앱</p>
+<p align="middle">
+  <img src="https://img.shields.io/badge/version-1.0.0-blue?style=flat-square" alt="template version"/>
+  <img src="https://img.shields.io/badge/language-html-red.svg?style=flat-square"/>
+  <img src="https://img.shields.io/badge/language-css-blue.svg?style=flat-square"/>
+  <img src="https://img.shields.io/badge/language-js-yellow.svg?style=flat-square"/>
+  <img src="https://img.shields.io/badge/framework-react-blue"/>
+  <img src="https://img.shields.io/badge/database-firebase-orange"/>
+  <a href="https://github.com/blackcoffee-study/js-lv1-book-manual/blob/main/LICENSE" target="_blank">
+    <img src="https://img.shields.io/github/license/blackcoffee-study/moonbucks-menu.svg?style=flat-square&label=license&color=08CE5D"/>
+  </a>
+</p>
 
-In the project directory, you can run:
+<br/>
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<p align="middle">
+  <a href="https://hanbitguri.github.io/myBoard">🖥️ 링크</a>
+</p>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<br/>
 
-### `npm test`
+## 🎯 요구사항1 - 웹 설계하기
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [ ] 부트스트랩 그리드 시스템을 이용하여 화면 레이아웃을 잡는다.
+  - [ ] 반응형 웹 설계를 한다. ( 모바일 , 데스크탑 )
+  - [ ] active,hover,focus 상태도 고려한다 ( 모바일 , 데스크탑 )
+- [ ] 리액트 라우터를 이용하여 SPA로 만든다.
+- [ ] 함수형 컴포넌트로 제작한다.
+  - [ ] 리액트 키 컨셉에 맞게 여러 hook도 사용해본다.
+- [ ] firebase rtd 를 이용해서 CRUD가 되는 게시판을 만들어본다.
 
-### `npm run build`
+## 🎯 요구사항2 - 게시판 설계하기
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [ ] 게시판 기본 CRUD를 설계한다.
+  - [ ] 댓글 CRUD도 설계한다.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 📝 firebase API
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### CREATE
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+| method | fetch url                    |
+| ------ | ---------------------------- |
+| POST   | https://${개인 firebase 해쉬 값}.firebaseio.com/post.json |
 
-## Learn More
+```javascript
+{
+commentList:{}
+date,
+detail,
+id,
+password,
+theme,
+title,
+viewPoint,
+writer,
+}
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### UPDATE
 
-### Code Splitting
+| method | uri                                  |
+| ------ | ------------------------------------ |
+| PATCH   | https://${개인 firebase 해쉬 값}.firebaseio.com/post.json  |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+### DELETE
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+| method | uri                          |
+| ------ | ---------------------------- |
+| DELETE  | https://${개인 firebase 해쉬 값}.firebaseio.com/post.json |
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<br/>
 
-### Advanced Configuration
+## 🐞 Issues
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+-[ ] active,hover,focus css처리가 아직 되지않았다.
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
