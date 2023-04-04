@@ -14,14 +14,14 @@ function Read({ boardItem, fetchData }) {
     <form className="read-form">
       <div className="read-form-header">
         <h2>
-          [{boardItem[param.id].theme}]{boardItem[param.id].title}
+          [{boardItem[param.id]?.theme}]{boardItem[param.id]?.title}
         </h2>
-        <span>{boardItem[param.id].writer}</span>
-        <span>{boardItem[param.id].date}</span>
-        <span>조회수 {boardItem[param.id].viewPoint}</span>
+        <span>{boardItem[param.id]?.writer}</span>
+        <span>{boardItem[param.id]?.date}</span>
+        <span>조회수 {boardItem[param.id]?.viewPoint}</span>
       </div>
 
-      <p className="read-form-main">{boardItem[param.id].detail}</p>
+      <p className="read-form-main">{boardItem[param.id]?.detail}</p>
 
       <div className="read-form-button">
         <input
@@ -35,7 +35,7 @@ function Read({ boardItem, fetchData }) {
           className="read-form-modify"
           onClick={e => {
             e.preventDefault();
-            if (boardItem[param.id].password === readPassword) {
+            if (boardItem[param.id]?.password === readPassword) {
               navigate(`/read/${param.id}/modify`);
             } else {
               alert('비밀번호가 맞지 않습니다.');
@@ -48,8 +48,8 @@ function Read({ boardItem, fetchData }) {
           className="read-form-remove"
           onClick={e => {
             e.preventDefault();
-            if (boardItem[param.id].password === readPassword) {
-              fetchMatcher('DELETE', null, boardItem[param.id].id);
+            if (boardItem[param.id]?.password === readPassword) {
+              fetchMatcher('DELETE', null, boardItem[param.id]?.id);
 
               alert('게시글이 정상적으로 삭제되었습니다.');
               fetchData();

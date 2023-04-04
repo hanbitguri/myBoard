@@ -9,26 +9,26 @@ function Comments({ boardItem, fetchData }) {
   const [commentCount, setCommentCount] = useState(0);
 
   const removeComment = index => {
-    fetchMatcher('DELETE', null, boardItem[param.id].id, loaded()[index][0]).then(() => fetchData());
+    fetchMatcher('DELETE', null, boardItem[param.id]?.id, loaded()[index][0]).then(() => fetchData());
   };
   const isComments = () => {
-    if (!boardItem[param.id].commentList) {
+    if (!boardItem[param.id]?.commentList) {
       return;
     }
-    return Object.keys(boardItem[param.id].commentList).length;
+    return Object.keys(boardItem[param.id]?.commentList).length;
   };
   const loaded = () => {
-    if (!boardItem[param.id].commentList) {
+    if (!boardItem[param.id]?.commentList) {
       return;
     }
-    return Object.entries(boardItem[param.id].commentList);
+    return Object.entries(boardItem[param.id]?.commentList);
   };
   useEffect(() => {
-    if (!boardItem[param.id].commentList) {
+    if (!boardItem[param.id]?.commentList) {
       return;
     }
-    setCommentCount(Object.keys(boardItem[param.id].commentList).length);
-  }, [boardItem[param.id].commentList]);
+    setCommentCount(Object.keys(boardItem[param.id]?.commentList).length);
+  }, [boardItem[param.id]?.commentList]);
 
   return (
     <>

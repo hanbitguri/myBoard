@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import BoardItem from '../../Components/Board/BoardItem';
 
-function Board({ boardItem, fetchData }) {
-  useEffect(fetchData, []);
+function Board({ boardItem }) {
   const [firstIndex, setFirstIndex] = useState(0);
   const [lastIndex, setLastIndex] = useState(10);
 

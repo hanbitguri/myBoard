@@ -37,7 +37,7 @@ function App() {
       });
   };
 
-  useEffect(fetchData, [boardItem]);
+  useEffect(fetchData, []);
 
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
@@ -48,7 +48,7 @@ function App() {
             <Navigation />
             <Routes>
               <Route path="/" element={<Main />} />
-              <Route path="/board/" element={<Board boardItem={boardItem} fetchData={fetchData} />} />
+              <Route path="/board/" element={<Board boardItem={boardItem} />} />
               <Route path="/board/write" element={<Write fetchData={fetchData}></Write>} />
               <Route path="/board/:id" element={<Read boardItem={boardItem} fetchData={fetchData} />} />
               <Route path="/read/:id/modify" element={<Modify boardItem={boardItem} fetchData={fetchData} />} />
